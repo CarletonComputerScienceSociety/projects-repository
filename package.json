@@ -6,17 +6,20 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check": "prettier --check '{src,tests}/**/*.{css,scss,html,js,tsx}'",
+    "format": "prettier --write '{src,tests}/**/*.{css,scss,html,js,tsx}'"
   },
   "dependencies": {
+    "next": "15.3.2",
+    "prettier": "^3.5.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/react-dom": "^19",
+    "typescript": "^5"
   }
 }
