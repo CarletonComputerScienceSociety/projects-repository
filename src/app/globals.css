@@ -1,6 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --page-width: 1400px;
 }
 
 /* @media (prefers-color-scheme: dark) {
