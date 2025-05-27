@@ -21,7 +21,11 @@ export function Button({
       type="button"
       aria-label={label}
     >
-      {icon && <span className={styles.icon}>{icon}</span>}
+      {icon && (
+        <span className={styles.icon} data-testid="icon">
+          {icon}
+        </span>
+      )}
       <span>{label}</span>
     </button>
   );
