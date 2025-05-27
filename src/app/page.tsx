@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import { getAllProjects } from "@/lib/markdown";
 import { Footer, Header, ProjectCard, Search } from "@/components";
 
