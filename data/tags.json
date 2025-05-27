@@ -1,0 +1,513 @@
+[
+  {
+    "id": "react",
+    "label": "React",
+    "lucideIcon": "Code",
+    "borderColor": "#fcfcfc",
+    "backgroundColor": "#fcfcfc"
+  },
+  {
+    "id": "python",
+    "label": "Python",
+    "lucideIcon": "Code",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "typescript",
+    "label": "TypeScript",
+    "lucideIcon": "Code",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "mobile",
+    "label": "Mobile",
+    "lucideIcon": "Smartphone",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "web development",
+    "label": "Web Development",
+    "lucideIcon": "Globe",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "machine learning",
+    "label": "Machine Learning",
+    "lucideIcon": "Brain",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "database",
+    "label": "Database",
+    "lucideIcon": "Database",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "react native",
+    "label": "React Native",
+    "lucideIcon": "Smartphone",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "node.js",
+    "label": "Node.js",
+    "lucideIcon": "Package",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "3d modeling",
+    "label": "3D Modeling",
+    "lucideIcon": "Code",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "ai",
+    "label": "AI",
+    "lucideIcon": "Brain",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "api",
+    "label": "API",
+    "lucideIcon": "Code",
+    "borderColor": "#fdfdfd",
+    "backgroundColor": "#fdfdfd"
+  },
+  {
+    "id": "ar",
+    "label": "AR",
+    "lucideIcon": "Code",
+    "borderColor": "#f7f7f8",
+    "backgroundColor": "#f7f7f8"
+  },
+  {
+    "id": "algorithms",
+    "label": "Algorithms",
+    "lucideIcon": "Code",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "arduino",
+    "label": "Arduino",
+    "lucideIcon": "Code",
+    "borderColor": "#fdf7d4",
+    "backgroundColor": "#fdf7d4"
+  },
+  {
+    "id": "automation",
+    "label": "Automation",
+    "lucideIcon": "Bot",
+    "borderColor": "#d9e6fb",
+    "backgroundColor": "#d9e6fb"
+  },
+  {
+    "id": "autonomous systems",
+    "label": "Autonomous Systems",
+    "lucideIcon": "Code",
+    "borderColor": "#fbf9fe",
+    "backgroundColor": "#fbf9fe"
+  },
+  {
+    "id": "blockchain",
+    "label": "Blockchain",
+    "lucideIcon": "Brain",
+    "borderColor": "#e7eafc",
+    "backgroundColor": "#e7eafc"
+  },
+  {
+    "id": "c#",
+    "label": "C#",
+    "lucideIcon": "Code",
+    "borderColor": "#fae8f3",
+    "backgroundColor": "#fae8f3"
+  },
+  {
+    "id": "c++",
+    "label": "C++",
+    "lucideIcon": "Code",
+    "borderColor": "#fbeddc",
+    "backgroundColor": "#fbeddc"
+  },
+  {
+    "id": "chart.js",
+    "label": "Chart.js",
+    "lucideIcon": "Code",
+    "borderColor": "#dff8fc",
+    "backgroundColor": "#dff8fc"
+  },
+  {
+    "id": "chemistry",
+    "label": "Chemistry",
+    "lucideIcon": "Code",
+    "borderColor": "#f0fbda",
+    "backgroundColor": "#f0fbda"
+  },
+  {
+    "id": "computer vision",
+    "label": "Computer Vision",
+    "lucideIcon": "Code",
+    "borderColor": "#f4f4f6",
+    "backgroundColor": "#f4f4f6"
+  },
+  {
+    "id": "creative ai",
+    "label": "Creative AI",
+    "lucideIcon": "Brain",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "cybersecurity",
+    "label": "Cybersecurity",
+    "lucideIcon": "Shield",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "d3.js",
+    "label": "D3.js",
+    "lucideIcon": "Code",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "dart",
+    "label": "Dart",
+    "lucideIcon": "Code",
+    "borderColor": "#e7ebfc",
+    "backgroundColor": "#e7ebfc"
+  },
+  {
+    "id": "data analysis",
+    "label": "Data Analysis",
+    "lucideIcon": "Code",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "data science",
+    "label": "Data Science",
+    "lucideIcon": "Code",
+    "borderColor": "#e1ecfc",
+    "backgroundColor": "#e1ecfc"
+  },
+  {
+    "id": "data visualization",
+    "label": "Data Visualization",
+    "lucideIcon": "Code",
+    "borderColor": "#e0e6fc",
+    "backgroundColor": "#e0e6fc"
+  },
+  {
+    "id": "deep learning",
+    "label": "Deep Learning",
+    "lucideIcon": "Brain",
+    "borderColor": "#d5faf1",
+    "backgroundColor": "#d5faf1"
+  },
+  {
+    "id": "distributed systems",
+    "label": "Distributed Systems",
+    "lucideIcon": "Code",
+    "borderColor": "#fceed8",
+    "backgroundColor": "#fceed8"
+  },
+  {
+    "id": "education",
+    "label": "Education",
+    "lucideIcon": "Code",
+    "borderColor": "#f2f5f9",
+    "backgroundColor": "#f2f5f9"
+  },
+  {
+    "id": "finance",
+    "label": "Finance",
+    "lucideIcon": "Code",
+    "borderColor": "#caf4de",
+    "backgroundColor": "#caf4de"
+  },
+  {
+    "id": "firebase",
+    "label": "Firebase",
+    "lucideIcon": "Code",
+    "borderColor": "#d2f9f0",
+    "backgroundColor": "#d2f9f0"
+  },
+  {
+    "id": "flutter",
+    "label": "Flutter",
+    "lucideIcon": "Code",
+    "borderColor": "#fefcfc",
+    "backgroundColor": "#fefcfc"
+  },
+  {
+    "id": "game development",
+    "label": "Game Development",
+    "lucideIcon": "Gamepad2",
+    "borderColor": "#e2fbe8",
+    "backgroundColor": "#e2fbe8"
+  },
+  {
+    "id": "go",
+    "label": "Go",
+    "lucideIcon": "Code",
+    "borderColor": "#e1e7fd",
+    "backgroundColor": "#e1e7fd"
+  },
+  {
+    "id": "graphics",
+    "label": "Graphics",
+    "lucideIcon": "Code",
+    "borderColor": "#e6e9fc",
+    "backgroundColor": "#e6e9fc"
+  },
+  {
+    "id": "hardware",
+    "label": "Hardware",
+    "lucideIcon": "Code",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "healthcare",
+    "label": "Healthcare",
+    "lucideIcon": "Code",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "iot",
+    "label": "IoT",
+    "lucideIcon": "Code",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "mathematics",
+    "label": "Mathematics",
+    "lucideIcon": "Code",
+    "borderColor": "#f0f6fe",
+    "backgroundColor": "#f0f6fe"
+  },
+  {
+    "id": "medical ai",
+    "label": "Medical AI",
+    "lucideIcon": "Brain",
+    "borderColor": "#f0f6fe",
+    "backgroundColor": "#f0f6fe"
+  },
+  {
+    "id": "meteorology",
+    "label": "Meteorology",
+    "lucideIcon": "Code",
+    "borderColor": "#f0f6fe",
+    "backgroundColor": "#f0f6fe"
+  },
+  {
+    "id": "mongodb",
+    "label": "MongoDB",
+    "lucideIcon": "Database",
+    "borderColor": "#f0f6fe",
+    "backgroundColor": "#f0f6fe"
+  },
+  {
+    "id": "monitoring",
+    "label": "Monitoring",
+    "lucideIcon": "Code",
+    "borderColor": "#fefbfc",
+    "backgroundColor": "#fefbfc"
+  },
+  {
+    "id": "music",
+    "label": "Music",
+    "lucideIcon": "Music",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "nlp",
+    "label": "NLP",
+    "lucideIcon": "Code",
+    "borderColor": "#f7f8fa",
+    "backgroundColor": "#f7f8fa"
+  },
+  {
+    "id": "network security",
+    "label": "Network Security",
+    "lucideIcon": "Shield",
+    "borderColor": "#f1fcf3",
+    "backgroundColor": "#f1fcf3"
+  },
+  {
+    "id": "neural networks",
+    "label": "Neural Networks",
+    "lucideIcon": "Brain",
+    "borderColor": "#f1fcf3",
+    "backgroundColor": "#f1fcf3"
+  },
+  {
+    "id": "opengl",
+    "label": "OpenGL",
+    "lucideIcon": "Code",
+    "borderColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  {
+    "id": "performance",
+    "label": "Performance",
+    "lucideIcon": "Code",
+    "borderColor": "#fefcfc",
+    "backgroundColor": "#fefcfc"
+  },
+  {
+    "id": "physics",
+    "label": "Physics",
+    "lucideIcon": "Code",
+    "borderColor": "#f6d1cf",
+    "backgroundColor": "#f6d1cf"
+  },
+  {
+    "id": "postgresql",
+    "label": "PostgreSQL",
+    "lucideIcon": "Database",
+    "borderColor": "#f5d4e6",
+    "backgroundColor": "#f5d4e6"
+  },
+  {
+    "id": "quantum computing",
+    "label": "Quantum Computing",
+    "lucideIcon": "Code",
+    "borderColor": "#f8dbda",
+    "backgroundColor": "#f8dbda"
+  },
+  {
+    "id": "raspberry pi",
+    "label": "Raspberry Pi",
+    "lucideIcon": "Code",
+    "borderColor": "#fae6cb",
+    "backgroundColor": "#fae6cb"
+  },
+  {
+    "id": "recommendation system",
+    "label": "Recommendation System",
+    "lucideIcon": "Code",
+    "borderColor": "#ccddfa",
+    "backgroundColor": "#ccddfa"
+  },
+  {
+    "id": "research",
+    "label": "Research",
+    "lucideIcon": "Code",
+    "borderColor": "#eceff4",
+    "backgroundColor": "#eceff4"
+  },
+  {
+    "id": "robotics",
+    "label": "Robotics",
+    "lucideIcon": "Bot",
+    "borderColor": "#e7d7fb",
+    "backgroundColor": "#e7d7fb"
+  },
+  {
+    "id": "slam",
+    "label": "SLAM",
+    "lucideIcon": "Code",
+    "borderColor": "#f8dbda",
+    "backgroundColor": "#f8dbda"
+  },
+  {
+    "id": "security",
+    "label": "Security",
+    "lucideIcon": "Shield",
+    "borderColor": "#e6e1fb",
+    "backgroundColor": "#e6e1fb"
+  },
+  {
+    "id": "sensors",
+    "label": "Sensors",
+    "lucideIcon": "Code",
+    "borderColor": "#e6e1fb",
+    "backgroundColor": "#e6e1fb"
+  },
+  {
+    "id": "simulation",
+    "label": "Simulation",
+    "lucideIcon": "Code",
+    "borderColor": "#ece1fc",
+    "backgroundColor": "#ece1fc"
+  },
+  {
+    "id": "smart contracts",
+    "label": "Smart Contracts",
+    "lucideIcon": "ShieldCheck",
+    "borderColor": "#eeeff1",
+    "backgroundColor": "#eeeff1"
+  },
+  {
+    "id": "solidity",
+    "label": "Solidity",
+    "lucideIcon": "Code",
+    "borderColor": "#fae3c7",
+    "backgroundColor": "#fae3c7"
+  },
+  {
+    "id": "sustainability",
+    "label": "Sustainability",
+    "lucideIcon": "Brain",
+    "borderColor": "#f9e3e2",
+    "backgroundColor": "#f9e3e2"
+  },
+  {
+    "id": "tensorflow",
+    "label": "TensorFlow",
+    "lucideIcon": "Code",
+    "borderColor": "#fcf3cc",
+    "backgroundColor": "#fcf3cc"
+  },
+  {
+    "id": "unity",
+    "label": "Unity",
+    "lucideIcon": "Code",
+    "borderColor": "#d5f7fb",
+    "backgroundColor": "#d5f7fb"
+  },
+  {
+    "id": "vr",
+    "label": "VR",
+    "lucideIcon": "Code",
+    "borderColor": "#d9f9e6",
+    "backgroundColor": "#d9f9e6"
+  },
+  {
+    "id": "voice recognition",
+    "label": "Voice Recognition",
+    "lucideIcon": "Code",
+    "borderColor": "#e4e6e9",
+    "backgroundColor": "#e4e6e9"
+  },
+  {
+    "id": "vue.js",
+    "label": "Vue.js",
+    "lucideIcon": "Code",
+    "borderColor": "#d9f9e6",
+    "backgroundColor": "#d9f9e6"
+  },
+  {
+    "id": "web3",
+    "label": "Web3",
+    "lucideIcon": "Globe",
+    "borderColor": "#fceed8",
+    "backgroundColor": "#fceed8"
+  }
+]

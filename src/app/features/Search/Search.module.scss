@@ -1,0 +1,79 @@
+.search {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.searchInner {
+  width: var(--page-width);
+  margin: 0 auto;
+  padding: 0rem 1rem;
+}
+
+.projectList {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, 1fr); // default: mobile
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 1rem;
+
+  // Tablet (≥ 640px)
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Medium (≥ 900px)
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  // Large (≥ 1200px)
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.activeFilters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.activeFiltersLabel {
+  font-size: 0.9rem;
+  color: #334155; // slate-700
+  margin-right: 0.5rem;
+}
+
+.selectedTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.selectedTag {
+  background-color: #f1f5f9; // slate-100
+  padding: 0.2rem 0.75rem;
+  padding-top: 0rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.selectedTag:hover {
+  background-color: #e2e8f0; // slate-200
+}
+
+.selectedTag strong {
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+
+.x {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-left: 0.2rem;
+}

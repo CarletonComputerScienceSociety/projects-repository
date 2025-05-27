@@ -38,5 +38,5 @@ export function getAllProjects(): Project[] {
   const project = getProjectBySlug(slugs[0])
   const project2 = getProjectBySlug(slugs[1])
 
-  return Array.from({ length: 40 }, (_, i) => (i % 2 === 0 ? project : project2))
+  return Array.from({ length: 100 }, (_, i) => (i % 2 === 0 ? project : project2))
 }

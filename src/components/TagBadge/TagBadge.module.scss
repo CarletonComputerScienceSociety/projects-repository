@@ -1,0 +1,29 @@
+.tagBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  border: 2px solid;
+  border-radius: 9999px;
+  background-color: white;
+  color: #1f2937;
+  white-space: nowrap;
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+  cursor: default;
+
+  &:hover {
+    transform: scale(1.04);
+    filter: brightness(0.95);
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
