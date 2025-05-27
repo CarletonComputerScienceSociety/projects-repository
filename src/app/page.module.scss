@@ -1,0 +1,32 @@
+.page {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+.projectList {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, 1fr); // default: mobile
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 1rem;
+
+  // Tablet (≥ 640px)
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Medium (≥ 900px)
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  // Large (≥ 1200px)
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

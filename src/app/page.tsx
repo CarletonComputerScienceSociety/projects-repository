@@ -9,14 +9,18 @@ export default function HomePage() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Header />
-        <Search />
-        <div className="grid">
+        {/* TODO: Search will be added in the future */}
+        <div hidden>
+          <Search />
+        </div>
+        <br />
+        <div className={styles.projectList}>
           {projects.map((p, i) => (
             <div key={`project-${i}`}>
               <ProjectCard
                 title={p.title}
                 description={p.description}
-                previewImageUrl={p.image || "/default-preview.png"}
+                previewImageUrl={p.previewImageUrl}
                 githubUrl={p.githubUrl}
                 liveUrl={p.liveUrl}
                 tags={p.tags}
@@ -25,6 +29,8 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        <br />
+        <br />
         <Footer />
       </main>
     </div>

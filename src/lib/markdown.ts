@@ -7,13 +7,10 @@ export type Project = {
   title: string
   description: string
   author: string
-  year: string
   tags: string[]
-  hasUI: boolean
-  image?: string
+  previewImageUrl?: string
   githubUrl: string
   liveUrl?: string
-  type: string
 }
 
 const projectRoot = path.join(process.cwd(), "content/projects")
@@ -30,16 +27,16 @@ export function getProjectBySlug(slug: string): Project {
   return {
     ...data,
     id: slug,
-    image: data.image ? `/projects/${slug}/${data.image.replace("./", "")}` : undefined,
+    previewImageUrl: data.previewImageUrl ? `/projects/${slug}/${data.previewImageUrl.replace("./", "")}` : undefined,
   } as Project
 }
 
 export function getAllProjects(): Project[] {
-    const slugs = getProjectSlugs()
+  const slugs = getProjectSlugs()
+  if (slugs.length < 2) return []
 
-    if (slugs.length === 0) return []
-    const project = getProjectBySlug(slugs[0])
+  const project = getProjectBySlug(slugs[0])
+  const project2 = getProjectBySlug(slugs[1])
 
-    // TEMPORARY: Return a fixed number of projects for testing
-    return Array(20).fill(project)
+  return Array.from({ length: 40 }, (_, i) => (i % 2 === 0 ? project : project2))
 }
