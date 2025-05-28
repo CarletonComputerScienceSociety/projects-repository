@@ -1,9 +1,28 @@
 .tagContainer {
-  margin-top: 1rem;
+  margin-bottom: 0rem;
 }
 
 .tagList {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: center;
+}
+
+.toggleButton {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  color: black;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.4rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #f3f4f6;
+  }
 }

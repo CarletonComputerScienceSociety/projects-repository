@@ -1,10 +1,11 @@
+import { useState } from "react";
+import { ChevronDown, ChevronUp, Code } from "lucide-react";
 import { TagBadge } from "@/components";
 import styles from "./TagList.module.scss";
 import {
   Atom,
   Bot,
   Brain,
-  Code,
   Database,
   FileText,
   Gamepad2,
@@ -54,26 +55,51 @@ interface Tag {
 
 interface TagListProps {
   tags: Tag[];
+  selectedTagIds?: string[];
   onTagClick: (tag: Tag) => void;
 }
 
-export function TagList({ tags, onTagClick }: TagListProps) {
+const COLLAPSED_COUNT = 12;
+
+export function TagList({ tags, selectedTagIds, onTagClick }: TagListProps) {
+  const [showAll, setShowAll] = useState(true);
+  const visibleTags = showAll ? tags : tags.slice(0, COLLAPSED_COUNT);
+  const hiddenCount = tags.length - COLLAPSED_COUNT;
+
   return (
     <div className={styles.tagContainer}>
-      {tags?.length > 0 && (
-        <div className={styles.tagList}>
-          {tags.map((tag) => (
-            <TagBadge
-              key={tag.id}
-              label={tag.label}
-              borderColor={tag.borderColor}
-              backgroundColor={tag.backgroundColor}
-              icon={LUCIDE_ICON_MAP[tag.lucideIcon] || <Code size={14} />}
-              onClick={() => onTagClick(tag)}
-            />
-          ))}
-        </div>
-      )}
+      <div className={styles.tagList}>
+        {visibleTags.map((tag) => (
+          <TagBadge
+            key={tag.id}
+            label={tag.label}
+            borderColor={tag.borderColor}
+            backgroundColor={tag.backgroundColor}
+            icon={LUCIDE_ICON_MAP[tag.lucideIcon] || <Code size={14} />}
+            onClick={() => onTagClick(tag)}
+            selected={selectedTagIds?.includes(tag.id) || false}
+          />
+        ))}
+
+        {hiddenCount > 0 && (
+          <button
+            className={styles.toggleButton}
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? (
+              <>
+                <ChevronUp size={14} style={{ marginRight: 4 }} />
+                Show Less
+              </>
+            ) : (
+              <>
+                <ChevronDown size={14} style={{ marginRight: 4 }} />
+                Show More ({hiddenCount})
+              </>
+            )}
+          </button>
+        )}
+      </div>
     </div>
   );
 }

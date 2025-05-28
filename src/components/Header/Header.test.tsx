@@ -21,7 +21,7 @@ describe("Header", () => {
     render(<Header />);
     expect(
       screen.getByText(
-        /Showcasing innovative projects from Carleton University students/i,
+        /Projects from the Carleton University computer science community/i,
       ),
     ).toBeInTheDocument();
   });

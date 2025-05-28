@@ -15,7 +15,7 @@ export function Header() {
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>Projects Repository</h1>
         <p className={styles.subtitle}>
-          Showcasing innovative projects from Carleton University students
+          Projects from the Carleton University computer science community
         </p>
       </div>
     </div>

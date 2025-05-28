@@ -7,6 +7,7 @@
   max-width: var(--page-width);
   margin: 0 auto;
   padding: 0rem 1rem;
+  padding: 1rem;
 }
 
 .projectList {
@@ -15,7 +16,6 @@
   grid-template-columns: repeat(1, 1fr); // default: mobile
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 1rem;
 
   // Tablet (≥ 640px)
   @media (min-width: 640px) {

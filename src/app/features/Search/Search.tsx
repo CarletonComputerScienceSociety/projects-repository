@@ -112,7 +112,12 @@ export function Search({ tags }: SearchProps) {
           value={searchText || ""}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <TagList tags={tags} onTagClick={onTagClick} />
+        <br />
+        <TagList
+          tags={tags}
+          onTagClick={onTagClick}
+          selectedTagIds={selectedTagIds}
+        />
         {SelectionMarkup}
         <br />
         {ProjectsMarkup}
