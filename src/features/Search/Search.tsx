@@ -118,7 +118,7 @@ export function Search({ tags }: SearchProps) {
           selectedTagIds={selectedTagIds}
         />
         {SelectionMarkup}
-        <br />
+        <div style={{ marginBottom: "3rem" }} />
         {ProjectsMarkup}
       </div>
     </div>
