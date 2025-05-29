@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { TextInput } from "../../../components/TextInput";
 import { TagList } from "./TagList";
 import styles from "./Search.module.scss";
-import { ProjectCard } from "@/components";
+import { ProjectCard, TextInput } from "@/components";
 
 export interface Tag {
   id: string;

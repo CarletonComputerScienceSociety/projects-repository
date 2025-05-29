@@ -1,5 +1,6 @@
 import styles from "./page.module.scss";
-import { Footer, Header, Search } from "@/components";
+import { Footer, Header } from "@/components";
+import { Search } from "@/features/Search/Search";
 import tags from "../../data/tags.json";
 
 export default function HomePage() {
