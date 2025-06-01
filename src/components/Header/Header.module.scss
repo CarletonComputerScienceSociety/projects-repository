@@ -36,6 +36,12 @@
   margin-bottom: 0.45rem;
 }
 
+@media (max-width: 768px) {
+  .title {
+    margin-top: 2.5rem;
+  }
+}
+
 .subtitle {
   font-size: 1.17rem;
   color: #475569;
