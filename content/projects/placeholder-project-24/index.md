@@ -7,6 +7,7 @@ tags:
     - Perl
     - Scripting
     - Legacy
+    - Python
 hasUI: true
 githubUrl: "https://github.com/placeholder/placeholder-project-24"
 ---
