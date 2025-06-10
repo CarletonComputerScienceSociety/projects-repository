@@ -7,6 +7,7 @@ tags:
     - Java
     - Spring Boot
     - Backend
+    - Python
 hasUI: true
 githubUrl: "https://github.com/placeholder/placeholder-project-5"
 ---

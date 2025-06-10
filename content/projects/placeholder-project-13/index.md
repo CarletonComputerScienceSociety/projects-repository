@@ -7,6 +7,7 @@ tags:
     - Go
     - gRPC
     - Backend
+    - Python
 hasUI: true
 githubUrl: "https://github.com/placeholder/placeholder-project-13"
 ---
