@@ -7,6 +7,7 @@ tags:
     - Rust
     - WASM
     - Performance
+    - Python
 hasUI: true
 githubUrl: "https://github.com/placeholder/placeholder-project-14"
 ---

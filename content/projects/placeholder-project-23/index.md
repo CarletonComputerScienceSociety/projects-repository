@@ -7,6 +7,7 @@ tags:
     - Scala
     - Akka
     - Concurrent
+    - Python
 hasUI: true
 githubUrl: "https://github.com/placeholder/placeholder-project-23"
 ---

@@ -7,6 +7,7 @@ tags:
     - Swift
     - iOS
     - Mobile
+    - Python
 hasUI: true
 githubUrl: "https://github.com/placeholder/placeholder-project-15"
 ---

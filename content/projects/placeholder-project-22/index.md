@@ -7,6 +7,7 @@ tags:
     - Elixir
     - Phoenix
     - Scalability
+    - Python
 hasUI: true
 githubUrl: "https://github.com/placeholder/placeholder-project-22"
 ---
