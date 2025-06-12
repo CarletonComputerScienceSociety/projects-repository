@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projects Repository
 
-## Getting Started
+This Repository showcases projects made by Carleton University students and alumni.
 
-First, run the development server:
+You will need the following:
 
-```bash
+- [Node.js](https://nodejs.org/en)
+
+## 📦 Setup
+
+To setup the Projects Repository, run the following commands:
+
+```
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Alternatively, you can run `npm i` instead of `npm install`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✅ Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To run tests on the Projects Repository, run the following command:
 
-## Learn More
+```
+npm run test
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Formatting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To format the project repository, run the following command:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+npm run format
+```
 
-## Deploy on Vercel
+## 🛠️ Adding a New Project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Create a folder under content/projects/
+2. Inside that folder, create an index.md file with the following frontmatter:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+---
+id: "another-project"
+title: "Another Project"
+description: "This is a description of another project that showcases my skills in React Native and AR technology."
+author: "Your name"
+tags:
+  - Example Tag
+  - React Native
+  - AR
+githubUrl: "https://github.com/"
+previewImageUrl: "./placeholder.svg"
+---
+```
+
+3. (Optional) Add a preview image to the same folder and reference it using the `previewImageUrl` field. The placeholder image should live within their projects folder.

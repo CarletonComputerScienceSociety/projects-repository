@@ -14,7 +14,9 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3",
+    "extend-shallow": "^3.0.2",
+    "gray-matter": "^3.1.1",
+    "kind-of": "^6.0.3",
     "lucide-react": "^0.511.0",
     "next": "15.3.2",
     "prettier": "^3.5.3",
@@ -23,6 +25,7 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "sass": "^1.89.0",
+    "strip-bom-string": "^1.0.0",
     "tinycolor2": "^1.6.0"
   },
   "devDependencies": {
