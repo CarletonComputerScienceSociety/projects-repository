@@ -22,10 +22,12 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className={styles.card}>
-      <div className={styles.header}>
-        <div className={styles.titleSection}>
-          <h2 className={styles.title}>{title}</h2>
-          <p className={styles.author}>{author}</p>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <div className={styles.titleSection}>
+            <h2 className={styles.title}>{title}</h2>
+            <p className={styles.author}>{author}</p>
+          </div>
         </div>
       </div>
 
