@@ -24,6 +24,17 @@
   width: 200px;
 }
 
+@media (max-width: 600px) {
+  .logo {
+    width: 150px;
+  }
+  .buttons {
+    button {
+      font-size: 0.7rem !important;
+    }
+  }
+}
+
 .titleContainer {
   max-width: 800px;
   margin: 0 auto;
