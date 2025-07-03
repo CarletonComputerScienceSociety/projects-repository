@@ -7,16 +7,18 @@ export default function HomePage() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Header />
-        <Search
-          tags={tags.map((tag) => ({
-            id: tag.id,
-            label: tag.label,
-            lucideIcon: tag.lucideIcon,
-            borderColor: tag.borderColor,
-            backgroundColor: tag.backgroundColor ?? "",
-          }))}
-        />
+        <div>
+          <Header />
+          <Search
+            tags={tags.map((tag) => ({
+              id: tag.id,
+              label: tag.label,
+              lucideIcon: tag.lucideIcon,
+              borderColor: tag.borderColor,
+              backgroundColor: tag.backgroundColor ?? "",
+            }))}
+          />
+        </div>
         <br />
         <br />
         <Footer />
