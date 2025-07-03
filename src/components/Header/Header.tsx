@@ -9,7 +9,13 @@ export function Header() {
         <img src="/ccss-logo-2022.png" alt="Logo" className={styles.logo} />
         <div className={styles.buttons}>
           <Button label="About" icon={<Info size={18} />} type="ghost" />
-          <Button label="Contribute" icon={<Plus size={16} />} type="outline" />
+          <a href="https://github.com/CarletonComputerScienceSociety/projects-repository">
+            <Button
+              label="Contribute"
+              icon={<Plus size={16} />}
+              type="outline"
+            />
+          </a>
         </div>
       </div>
       <div className={styles.titleContainer}>

@@ -47,6 +47,23 @@
   margin-right: 0.5rem;
 }
 
+.button {
+  background-color: #334155;
+  color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+}
+
+.noResults {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .selectedTags {
   display: flex;
   flex-wrap: wrap;

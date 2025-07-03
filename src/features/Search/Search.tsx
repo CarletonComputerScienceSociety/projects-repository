@@ -83,6 +83,11 @@ export function Search({ tags }: SearchProps) {
             </span>
           ))}
       </div>
+      <div>
+        <button className={styles.button} onClick={() => clearSelectedTags()}>
+          Clear filters
+        </button>
+      </div>
     </div>
   );
 
@@ -104,6 +109,13 @@ export function Search({ tags }: SearchProps) {
     </div>
   );
 
+  const NoResultsMarkup = (
+    <div className={styles.noResults}>
+      <h2>No Projects Found 🔍</h2>
+      <p>Try adjusting your search or removing some filters.</p>
+    </div>
+  );
+
   return (
     <div className={styles.search}>
       <div className={styles.searchInner}>
@@ -119,7 +131,7 @@ export function Search({ tags }: SearchProps) {
         />
         {SelectionMarkup}
         <div style={{ marginBottom: "3rem" }} />
-        {ProjectsMarkup}
+        {projects.length === 0 ? <>{NoResultsMarkup}</> : <>{ProjectsMarkup}</>}
       </div>
     </div>
   );
