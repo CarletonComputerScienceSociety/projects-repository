@@ -33,24 +33,67 @@ export function Search({ tags }: SearchProps) {
   const [searchText, setSearchText] = useState("");
   const [projects, setProjects] = useState<Project[]>([]);
 
-  const fetchProjects = async () => {
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+
+  const fetchProjects = async (pageToFetch = 1, reset = false) => {
+    if (isLoadingMore || (!hasMore && !reset)) return;
+
+    if (reset) setProjects([]);
+    setIsLoadingMore(true);
+
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
     const params = new URLSearchParams();
-    if (searchText) params.set("search", searchText);
-    selectedTagIds.forEach((tag) => params.append("tags", tag));
+    params.set("page", pageToFetch.toString());
+    params.set("pageSize", "20");
+
+    if (searchText.trim()) params.set("search", searchText);
+    if (selectedTagIds.length > 0) {
+      selectedTagIds.forEach((tag) => params.append("tags", tag));
+    }
 
     try {
       const res = await fetch(`/api/projects?${params.toString()}`);
       const data = await res.json();
-      setProjects(data.results ?? data);
+
+      setProjects((prev) =>
+        pageToFetch === 1 || reset
+          ? (data.results ?? [])
+          : [...prev, ...(data.results ?? [])],
+      );
+
+      setHasMore((data.results?.length ?? 0) >= 20);
+      setPage(pageToFetch);
     } catch (err) {
       console.error("Failed to load projects", err);
+    } finally {
+      setIsLoadingMore(false);
     }
   };
 
   useEffect(() => {
-    fetchProjects();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setPage(1);
+    setHasMore(true);
+    fetchProjects(1, true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTagIds, searchText]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
+
+      if (nearBottom && hasMore && !isLoadingMore) {
+        fetchProjects(page + 1);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [page, hasMore, isLoadingMore]);
 
   const onTagClick = (tag: Tag) => {
     setSelectedTagIds((prev) =>
@@ -61,10 +104,8 @@ export function Search({ tags }: SearchProps) {
   };
 
   const clearSelectedTags = () => setSelectedTagIds([]);
-
-  const unSelectTag = (tagId: string) => {
+  const unSelectTag = (tagId: string) =>
     setSelectedTagIds((prev) => prev.filter((id) => id !== tagId));
-  };
 
   const SelectionMarkup = selectedTagIds.length > 0 && (
     <div className={styles.activeFilters}>
@@ -91,21 +132,9 @@ export function Search({ tags }: SearchProps) {
     </div>
   );
 
-  const ProjectsMarkup = (
-    <div className={styles.projectList}>
-      {projects.map((p, i) => (
-        <div key={`project-${i}`}>
-          <ProjectCard
-            title={p.title}
-            description={p.description}
-            previewImageUrl={p.previewImageUrl}
-            githubUrl={p.githubUrl}
-            liveUrl={p.liveUrl}
-            tags={p.tags}
-            author={p.author}
-          />
-        </div>
-      ))}
+  const SpinnerMarkup = (
+    <div style={{ textAlign: "center", marginTop: "1rem", width: "100%" }}>
+      <div className={styles.spinner}></div>
     </div>
   );
 
@@ -116,11 +145,32 @@ export function Search({ tags }: SearchProps) {
     </div>
   );
 
+  const ProjectsMarkup = (
+    <>
+      {isLoadingMore && SpinnerMarkup}
+      <div className={styles.projectList}>
+        {projects.map((p, i) => (
+          <div key={`project-${i}`}>
+            <ProjectCard
+              title={p.title}
+              description={p.description}
+              previewImageUrl={p.previewImageUrl}
+              githubUrl={p.githubUrl}
+              liveUrl={p.liveUrl}
+              tags={p.tags}
+              author={p.author}
+            />
+          </div>
+        ))}
+      </div>
+    </>
+  );
+
   return (
     <div className={styles.search}>
       <div className={styles.searchInner}>
         <TextInput
-          value={searchText || ""}
+          value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
         <br />
