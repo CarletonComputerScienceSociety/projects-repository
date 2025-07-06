@@ -28,15 +28,6 @@ interface SearchProps {
   tags: Tag[];
 }
 
-// ✅ Spinner component
-function Spinner() {
-  return (
-    <div style={{ textAlign: "center", marginTop: "1rem" }}>
-      <div className={styles.spinner}></div>
-    </div>
-  );
-}
-
 export function Search({ tags }: SearchProps) {
   const [selectedTagIds, setSelectedTagIds] = useState<string[]>([]);
   const [searchText, setSearchText] = useState("");
@@ -69,8 +60,8 @@ export function Search({ tags }: SearchProps) {
 
       setProjects((prev) =>
         pageToFetch === 1 || reset
-          ? data.results ?? []
-          : [...prev, ...(data.results ?? [])]
+          ? (data.results ?? [])
+          : [...prev, ...(data.results ?? [])],
       );
 
       setHasMore((data.results?.length ?? 0) >= 20);
@@ -82,7 +73,6 @@ export function Search({ tags }: SearchProps) {
     }
   };
 
-  // ⏫ Trigger fetch when filters or search change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setPage(1);
@@ -91,7 +81,6 @@ export function Search({ tags }: SearchProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTagIds, searchText]);
 
-  // 🔁 Infinite scroll trigger
   useEffect(() => {
     const handleScroll = () => {
       const nearBottom =
@@ -110,7 +99,7 @@ export function Search({ tags }: SearchProps) {
     setSelectedTagIds((prev) =>
       prev.includes(tag.id)
         ? prev.filter((id) => id !== tag.id)
-        : [...prev, tag.id]
+        : [...prev, tag.id],
     );
   };
 
@@ -131,8 +120,7 @@ export function Search({ tags }: SearchProps) {
               className={styles.selectedTag}
               onClick={() => unSelectTag(tag!.id)}
             >
-              <strong>{tag!.label}</strong>{" "}
-              <span className={styles.x}>×</span>
+              <strong>{tag!.label}</strong> <span className={styles.x}>×</span>
             </span>
           ))}
       </div>
@@ -144,23 +132,9 @@ export function Search({ tags }: SearchProps) {
     </div>
   );
 
-  const ProjectsMarkup = (
-    <div className={styles.projectList}>
-      {projects.map((p, i) => (
-        <div key={`project-${i}`}>
-          <ProjectCard
-            title={p.title}
-            description={p.description}
-            previewImageUrl={p.previewImageUrl}
-            githubUrl={p.githubUrl}
-            liveUrl={p.liveUrl}
-            tags={p.tags}
-            author={p.author}
-          />
-        </div>
-      ))}
-
-      {isLoadingMore && <Spinner />}
+  const SpinnerMarkup = (
+    <div style={{ textAlign: "center", marginTop: "1rem", width: "100%" }}>
+      <div className={styles.spinner}></div>
     </div>
   );
 
@@ -169,6 +143,27 @@ export function Search({ tags }: SearchProps) {
       <h2>No Projects Found 🔍</h2>
       <p>Try adjusting your search or removing some filters.</p>
     </div>
+  );
+
+  const ProjectsMarkup = (
+    <>
+      {isLoadingMore && SpinnerMarkup}
+      <div className={styles.projectList}>
+        {projects.map((p, i) => (
+          <div key={`project-${i}`}>
+            <ProjectCard
+              title={p.title}
+              description={p.description}
+              previewImageUrl={p.previewImageUrl}
+              githubUrl={p.githubUrl}
+              liveUrl={p.liveUrl}
+              tags={p.tags}
+              author={p.author}
+            />
+          </div>
+        ))}
+      </div>
+    </>
   );
 
   return (
