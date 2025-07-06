@@ -43,7 +43,7 @@ export function Search({ tags }: SearchProps) {
     if (reset) setProjects([]);
     setIsLoadingMore(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1000)); // 🔧 Simulate delay for spinner
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
     const params = new URLSearchParams();
     params.set("page", pageToFetch.toString());
