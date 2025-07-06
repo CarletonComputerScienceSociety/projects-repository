@@ -31,18 +31,12 @@ export function getProjectBySlug(slug: string): Project {
   } as Project
 }
 
-// export function getAllProjects(): Project[] {
-//   const slugs = getProjectSlugs()
-//   if (slugs.length < 2) return []
-
-//   const project = getProjectBySlug(slugs[0])
-//   const project2 = getProjectBySlug(slugs[1])
-
-//   return Array.from({ length: 100 }, (_, i) => (i % 2 === 0 ? project : project2))
-// }
-
 export function getAllProjects(): Project[] {
   const slugs = getProjectSlugs()
+  if (slugs.length < 2) return []
 
-  return slugs.map((slug) => getProjectBySlug(slug))
+  const project = getProjectBySlug(slugs[0])
+  const project2 = getProjectBySlug(slugs[1])
+
+  return Array.from({ length: 100 }, (_, i) => (i % 2 === 0 ? project : project2))
 }
