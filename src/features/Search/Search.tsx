@@ -146,24 +146,21 @@ export function Search({ tags }: SearchProps) {
   );
 
   const ProjectsMarkup = (
-    <>
-      {isLoadingMore && SpinnerMarkup}
-      <div className={styles.projectList}>
-        {projects.map((p, i) => (
-          <div key={`project-${i}`}>
-            <ProjectCard
-              title={p.title}
-              description={p.description}
-              previewImageUrl={p.previewImageUrl}
-              githubUrl={p.githubUrl}
-              liveUrl={p.liveUrl}
-              tags={p.tags}
-              author={p.author}
-            />
-          </div>
-        ))}
-      </div>
-    </>
+    <div className={styles.projectList}>
+      {projects.map((p, i) => (
+        <div key={`project-${i}`}>
+          <ProjectCard
+            title={p.title}
+            description={p.description}
+            previewImageUrl={p.previewImageUrl}
+            githubUrl={p.githubUrl}
+            liveUrl={p.liveUrl}
+            tags={p.tags}
+            author={p.author}
+          />
+        </div>
+      ))}
+    </div>
   );
 
   return (
@@ -181,7 +178,13 @@ export function Search({ tags }: SearchProps) {
         />
         {SelectionMarkup}
         <div style={{ marginBottom: "3rem" }} />
-        {projects.length === 0 ? <>{NoResultsMarkup}</> : <>{ProjectsMarkup}</>}
+        {isLoadingMore && SpinnerMarkup}
+        {!isLoadingMore &&
+          (projects.length === 0 ? (
+            <>{NoResultsMarkup}</>
+          ) : (
+            <>{ProjectsMarkup}</>
+          ))}
       </div>
     </div>
   );
