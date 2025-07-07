@@ -99,7 +99,7 @@ export function Search({ tags }: SearchProps) {
     setSelectedTagIds((prev) =>
       prev.includes(tag.id)
         ? prev.filter((id) => id !== tag.id)
-        : [...prev, tag.id],
+        : [...prev, tag.id]
     );
   };
 
