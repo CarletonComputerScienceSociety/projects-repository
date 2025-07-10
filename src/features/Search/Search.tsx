@@ -177,7 +177,7 @@ export function Search({ tags }: SearchProps) {
           selectedTagIds={selectedTagIds}
         />
         {SelectionMarkup}
-        <div style={{ marginBottom: "3rem" }} />
+        <div className={styles.space} />
         {isLoadingMore && SpinnerMarkup}
         {!isLoadingMore &&
           (projects.length === 0 ? (

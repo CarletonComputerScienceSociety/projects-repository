@@ -59,6 +59,13 @@
   font-size: 0.72rem;
 }
 
+.space {
+  margin-bottom: 3rem;
+  @media (max-width: 600px) {
+    margin-bottom: 1rem;
+  }
+}
+
 .noResults {
   text-align: center;
   margin-top: 5rem;

@@ -7,6 +7,10 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
+  // Tablet (≥ 640px)
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 
 .toggleButton {
