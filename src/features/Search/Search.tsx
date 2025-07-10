@@ -56,7 +56,7 @@ export function Search({ tags }: SearchProps) {
     setSelectedTagIds((prev) =>
       prev.includes(tag.id)
         ? prev.filter((id) => id !== tag.id)
-        : [...prev, tag.id]
+        : [...prev, tag.id],
     );
   };
 
@@ -130,7 +130,7 @@ export function Search({ tags }: SearchProps) {
           selectedTagIds={selectedTagIds}
         />
         {SelectionMarkup}
-        <div style={{ marginBottom: "3rem" }} />
+        <div className={styles.space} />
         {projects.length === 0 ? <>{NoResultsMarkup}</> : <>{ProjectsMarkup}</>}
       </div>
     </div>
