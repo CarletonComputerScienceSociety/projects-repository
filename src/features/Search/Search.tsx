@@ -61,7 +61,7 @@ export function Search({ tags }: SearchProps) {
       setProjects((prev) =>
         pageToFetch === 1 || reset
           ? (data.results ?? [])
-          : [...prev, ...(data.results ?? [])],
+          : [...prev, ...(data.results ?? [])]
       );
 
       setHasMore((data.results?.length ?? 0) >= 20);
