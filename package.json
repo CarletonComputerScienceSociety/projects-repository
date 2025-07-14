@@ -2,9 +2,12 @@
   "name": "projects-repository",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "move-project-images": "node scripts/move-project-images.js",
+    "build": "npm run move-project-images && next build",
     "start": "next start",
     "lint": "next lint",
     "check": "prettier --check '{src,tests}/**/*.{css,scss,html,js,tsx}'",
