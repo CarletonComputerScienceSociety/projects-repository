@@ -30,14 +30,14 @@ const secondTag = {
 describe("TagList", () => {
   it("hides tags", () => {
     render(
-      <TagList tags={[mockTag]} onTagClick={() => {}} selectedTagIds={[]} />,
+      <TagList tags={[mockTag]} onTagClick={() => {}} selectedTagIds={[]} />
     );
     expect(screen.getByText(mockTagLabel)).toBeInTheDocument();
   });
   it("test click event", () => {
     const mockClick = jest.fn();
     render(
-      <TagList tags={[mockTag]} onTagClick={mockClick} selectedTagIds={[]} />,
+      <TagList tags={[mockTag]} onTagClick={mockClick} selectedTagIds={[]} />
     );
     const tag = screen.getByText("Atom");
     fireEvent.click(tag);
@@ -53,5 +53,23 @@ describe("TagList", () => {
     fireEvent.click(showLessButton);
     const tag = screen.queryByText(secondTagLabel);
     expect(tag).toBeNull();
+  });
+  it("Pressing show more button to show the tags", () => {
+    const mockClick = jest.fn();
+    const tags = Array(13).fill(mockTag);
+    tags.push(secondTag);
+    const { container } = render(
+      <TagList tags={tags} onTagClick={mockClick} selectedTagIds={[]} />
+    );
+    const showLessButton = screen.getByText("Show Less");
+    fireEvent.click(showLessButton);
+
+    const string = container.firstChild?.textContent;
+    expect(string).toContain("Show More");
+
+    const showMoreButton = screen.getByText("Show More (2)");
+    fireEvent.click(showMoreButton);
+    const str = container.firstChild?.textContent;
+    expect(str).toContain("Show Less");
   });
 });

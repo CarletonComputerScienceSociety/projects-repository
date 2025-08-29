@@ -24,7 +24,7 @@ export function TagBadge({
     : backgroundColor;
 
   return (
-    <span
+    <div
       className={styles.tagBadge}
       style={{
         borderColor,
@@ -35,6 +35,6 @@ export function TagBadge({
     >
       <span className={styles.icon}>{icon}</span>
       <span>{label}</span>
-    </span>
+    </div>
   );
 }
