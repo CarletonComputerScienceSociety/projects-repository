@@ -69,9 +69,9 @@ export function TagList({ tags, selectedTagIds, onTagClick }: TagListProps) {
   return (
     <div className={styles.tagContainer}>
       <div className={styles.tagList}>
-        {visibleTags.map((tag) => (
+        {visibleTags.map((tag, i) => (
           <TagBadge
-            key={tag.id}
+            key={`${tag.id}-${i}`}
             label={tag.label}
             borderColor={tag.borderColor}
             backgroundColor={tag.backgroundColor}
